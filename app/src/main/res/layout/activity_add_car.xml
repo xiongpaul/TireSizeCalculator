@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_car"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="io.github.xiongpaul.tiresizecalculator.AddCarActivity">
+
+    <TextView
+        android:text="@string/year_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/YearLabel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/yearSpinner"
+        android:layout_below="@+id/YearLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/make_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/yearSpinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/makeLabel" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Car Manufacturer"
+        android:ems="10"
+        android:layout_below="@+id/makeLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/makeEditText" />
+
+    <TextView
+        android:text="@string/model_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/makeEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/modelLabel" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Car Model"
+        android:ems="10"
+        android:layout_below="@+id/modelLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/modelEditText" />
+
+    <TextView
+        android:text="@string/tire_spec_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tireSizeLabel"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/modelEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+
+    <Button
+        android:text="@string/addToGarageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="68dp"
+        android:id="@+id/addToGarageButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="addToGarage"/>
+
+
+
+    <Spinner
+        android:layout_width="85sp"
+        android:layout_height="wrap_content"
+        android:id="@+id/treadWidthSpinner"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/slash_label"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_width="30sp"
+        android:layout_height="40sp"
+        android:layout_alignBottom="@+id/treadWidthSpinner"
+        android:layout_toRightOf="@+id/treadWidthSpinner"
+        android:layout_toEndOf="@+id/treadWidthSpinner"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/slashLabel" />
+
+
+
+    <Spinner
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/treadWidthSpinner"
+        android:layout_toRightOf="@+id/slashLabel"
+        android:layout_toEndOf="@+id/slashLabel"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:id="@+id/aspectRatioSpinner" />
+
+    <TextView
+        android:text="@string/r_label"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_width="30sp"
+        android:layout_height="40sp"
+        android:layout_alignBottom="@+id/aspectRatioSpinner"
+        android:layout_toRightOf="@+id/aspectRatioSpinner"
+        android:layout_toEndOf="@+id/aspectRatioSpinner"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/RLabel" />
+
+    <Spinner
+        android:layout_width="80sp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:id="@+id/rimDiameterSpinner"
+        android:layout_alignBottom="@+id/RLabel"
+        android:layout_toRightOf="@+id/RLabel"
+        android:layout_toEndOf="@+id/RLabel" />
+
+</RelativeLayout>

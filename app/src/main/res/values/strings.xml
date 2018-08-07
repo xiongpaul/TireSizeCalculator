@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Tire Size Calculator</string>
+
+    <string name="addCarButton">Add Car</string>
+    <string name="title_activity_add_car">AddCarActivity</string>
+    <string name="year_label">Year</string>
+    <string name="make_label">Make</string>
+    <string name="model_label">Model</string>
+    <string name="tire_spec_label">Tire Specification</string>
+    <string name="slash_label">/</string>
+    <string name="r_label">R</string>
+    <string name="offset_label">Offset</string>
+    <string name="addToGarageButton">Add to Garage</string>
+    <string name="title_activity_calculator">CalculatorActivity</string>
+    <string name="size_comparison_label">Select tire size for comparison:</string>
+    <string name="calculateButton">Compare</string>
+    <string name="clicked_car_label">Clicked Car</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="delete_button">Delete Car</string>
+    <string name="proceed_button">Proceed to Calculator</string>
+    <string name="selected_vehicle_label">Vehicle Information</string>
+    <string name="oem_setup_label">OEM Setup</string>
+    <string name="aft_setup_label">Aftermarket Setup</string>
+    <string name="tire_size_label">Tire Size</string>
+    <string name="oem_tire_size" />
+    <string name="aft_tire_size" />
+    <string name="section_width_label">Section Width</string>
+    <string name="oem_section_width" />
+    <string name="aft_section_width" />
+    <string name="sidewall_label">Sidewall"</string>
+    <string name="oem_sidewall" />
+    <string name="aft_sidewall" />
+    <string name="tire_diameter_label">Overall Diameter</string>
+    <string name="oem_tire_diameter" />
+    <string name="aft_tire_diameter" />
+    <string name="circumference_label">Circumference</string>
+    <string name="revs_km_label">Revs per km</string>
+    <string name="difference_label">Difference</string>
+    <string name="speedometer_label">Speedometer</string>
+    <string name="speedometer_difference" />
+    <string name="oem_circumference" />
+    <string name="oem_revs_km" />
+    <string name="aft_circum" />
+    <string name="aft_revs_km" />
+    <string name="percent_difference" />
+
+
+</resources>

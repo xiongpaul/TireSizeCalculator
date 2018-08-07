@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_calculator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="io.github.xiongpaul.tiresizecalculator.CalculatorActivity">
+
+    <TextView
+        android:text="@string/selected_vehicle_label"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/selectedVehicleTextView" />
+
+    <TextView
+        android:text="@string/size_comparison_label"
+        android:paddingBottom="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectedVehicleTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/sizeComparisonTextView" />
+
+    <Spinner
+        android:layout_width="85sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sizeComparisonTextView"
+        android:id="@+id/treadWidthSpinner"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/slash_label"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_width="30sp"
+        android:layout_height="40sp"
+        android:layout_alignBottom="@+id/treadWidthSpinner"
+        android:layout_toRightOf="@+id/treadWidthSpinner"
+        android:layout_toEndOf="@+id/treadWidthSpinner"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/slashLabel" />
+
+
+
+    <Spinner
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/treadWidthSpinner"
+        android:layout_toRightOf="@+id/slashLabel"
+        android:layout_toEndOf="@+id/slashLabel"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:id="@+id/aspectRatioSpinner" />
+
+    <TextView
+        android:text="@string/r_label"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_width="30sp"
+        android:layout_height="40sp"
+        android:layout_alignBottom="@+id/aspectRatioSpinner"
+        android:layout_toRightOf="@+id/aspectRatioSpinner"
+        android:layout_toEndOf="@+id/aspectRatioSpinner"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/RLabel" />
+
+    <Spinner
+        android:layout_width="80sp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:id="@+id/rimDiameterSpinner"
+        android:layout_alignBottom="@+id/RLabel"
+        android:layout_toRightOf="@+id/RLabel"
+        android:layout_toEndOf="@+id/RLabel" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/treadWidthSpinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/calculateButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/calculateButton" />
+
+    <TextView
+        android:text="@string/oem_setup_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calculateButton"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/oemSetupTextView" />
+
+    <TextView
+        android:text="@string/aft_setup_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/oemSetupTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/aftSetupTextView" />
+
+    <TextView
+        android:text="@string/tire_size_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/oemSetupTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/tireSizeTextView" />
+
+    <TextView
+        android:text="@string/oem_tire_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/oemSetupTextView"
+        android:layout_alignLeft="@+id/oemSetupTextView"
+        android:layout_alignStart="@+id/oemSetupTextView"
+        android:id="@+id/oemTireSizeTextView" />
+
+    <TextView
+        android:text="@string/aft_tire_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aftSetupTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/aftTireSizeTextView" />
+
+    <TextView
+        android:text="@string/section_width_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tireSizeTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/sectionWidthTextView" />
+
+    <TextView
+        android:text="@string/oem_section_width"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/oemTireSizeTextView"
+        android:layout_alignLeft="@+id/oemTireSizeTextView"
+        android:layout_alignStart="@+id/oemTireSizeTextView"
+        android:id="@+id/oemSectionWidthTextView" />
+
+    <TextView
+        android:text="@string/aft_section_width"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aftTireSizeTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/aftSectionWidthTextView" />
+
+    <TextView
+        android:text="@string/sidewall_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sectionWidthTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/sidewallTextView" />
+
+    <TextView
+        android:text="@string/oem_sidewall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/oemSectionWidthTextView"
+        android:layout_alignLeft="@+id/oemSectionWidthTextView"
+        android:layout_alignStart="@+id/oemSectionWidthTextView"
+        android:id="@+id/oemSidewallTextView" />
+
+    <TextView
+        android:text="@string/aft_sidewall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aftSectionWidthTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/aftSidewallTextView" />
+
+    <TextView
+        android:text="@string/tire_diameter_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sidewallTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/tireDiameterTextView" />
+
+    <TextView
+        android:text="@string/oem_tire_diameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/oemSidewallTextView"
+        android:layout_alignLeft="@+id/oemSidewallTextView"
+        android:layout_alignStart="@+id/oemSidewallTextView"
+        android:id="@+id/oemTireDiameterTextView" />
+
+    <TextView
+        android:text="@string/aft_tire_diameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aftSidewallTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/aftTireDiameterTextView" />
+
+    <TextView
+        android:text="@string/circumference_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tireDiameterTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/circumTextView" />
+
+    <TextView
+        android:text="@string/oem_circumference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/oemTireDiameterTextView"
+        android:layout_alignLeft="@+id/oemTireDiameterTextView"
+        android:layout_alignStart="@+id/oemTireDiameterTextView"
+        android:id="@+id/oemCircumTextView" />
+
+    <TextView
+        android:text="@string/aft_circum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aftCircumTextView"
+        android:layout_below="@+id/aftTireDiameterTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="@string/revs_km_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/revKmTextView"
+        android:layout_below="@+id/circumTextView" />
+
+    <TextView
+        android:text="@string/oem_revs_km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/revKmTextView"
+        android:layout_alignLeft="@+id/oemCircumTextView"
+        android:layout_alignStart="@+id/oemCircumTextView"
+        android:id="@+id/oemRevKmTextView" />
+
+    <TextView
+        android:text="@string/aft_revs_km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/oemRevKmTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/aftRevKmTextView" />
+
+    <TextView
+        android:text="@string/difference_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/revKmTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/differenceTextView" />
+
+    <TextView
+        android:text="@string/percent_difference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aftRevKmTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/diffPercentTextView" />
+
+    <TextView
+        android:text="@string/speedometer_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/differenceTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/speedoTextView" />
+
+    <TextView
+        android:text="@string/speedometer_difference"
+        android:layout_alignLeft="@+id/speedoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/speedoDiffTextView"
+        android:layout_below="@+id/speedoTextView" />
+
+</RelativeLayout>
